@@ -1,0 +1,123 @@
+	
+
+<div class="p">
+<div class="row">
+	<div class="col-6">
+		<div align="center" style="padding: 100px">
+			<div align="center">
+				<mat-card class="matcard"><b style="font-size: 20px;color: white">Middleware</b></mat-card>
+			</div>
+
+			<form (submit)="getValue()">
+				<div align="center" style="padding: 10px">
+					<mat-card  class="post-card">
+						<div class="col">
+
+							<div class="row-2">
+								<mat-form-field>
+								    <input matInput class="input" required [(ngModel)]="producer" name="producer" placeholder="Enter The producer">
+								 </mat-form-field>
+							</div>
+
+
+							<div class="row-2">
+								<mat-form-field>
+								    <input matInput class="input" required [(ngModel)]="author" name="author" placeholder="Enter The author">
+								 </mat-form-field>
+							</div>
+
+							<div class="row-2">
+								<mat-form-field>
+								    <input matInput [(ngModel)]="to" required  name="to" placeholder="Enter The  to">
+								 </mat-form-field>
+							</div>
+
+							<div class="row-2">
+								<mat-form-field>
+								    <input matInput class="input" [(ngModel)]="content" required name="content" placeholder="Enter The content">
+								 </mat-form-field>
+							</div>
+
+
+							<div class="row-2">
+								<mat-form-field>
+								    <input matInput [(ngModel)]="quality" required name="quality" placeholder="Enter The quality">
+								 </mat-form-field>
+							</div>
+
+							<div class="row-2">
+								<mat-form-field>
+								    <input matInput [(ngModel)]="price" name="price" required placeholder="Enter The price">
+								 </mat-form-field>
+							</div>
+
+
+						</div>
+
+						<div class="row" >
+							<div class="col-6" style="padding: 15px">
+								<button mat-button class="get" type="reset">RESET</button>
+							</div>
+							<div class="col-6" style="padding: 15px">
+								<button mat-button class="get"  type="submit">SUBMIT</button>
+							</div>
+						</div>
+
+
+					</mat-card>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="col-6">
+		<div>
+			<div class="col">
+				<div class="row-9">
+					<div class="row">
+						<div class="col-6" style="padding: 50px">
+							<button mat-button class="gets" type="reset" (click)="mine()"><b>Mine</b></button>
+						</div>
+						<div class="col-9" style="padding: 50px">
+							<button mat-button class="gets" type="submit" (click)="replace()"><b>Replace</b></button>
+						</div>
+					</div>
+				</div>
+				<div class="row-6">
+					<div *ngIf="replaceEnable == true">
+						<div *ngFor = "let content of database" style="padding: 10px">
+							<mat-card class="chk">
+								<div class = 'row'>
+									<div class="col-6">
+										Index<br>
+										Producer<br>
+										from<br> 
+										To <br>
+										content <br>
+										Quality<br>
+										Price<br>
+										Timestamp<br>
+										Hash <br>
+										Previous Hash<br>
+									</div> 
+									<div class="col-6">
+										{{content['index']}}<br>
+										{{content['producer']}}<br>
+									    {{content['author']}}<br>
+									    {{content['to']}}<br>
+									    {{content['content']}}<br>
+									    {{content['quality']}}<br>
+									    {{content['price']}}<br>
+									 	{{content['timestamp']}}<br>
+									    {{content['hash']}}<br>
+									    {{content['previous_hash']}}<br>
+									</div>
+								</div>
+							</mat-card>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

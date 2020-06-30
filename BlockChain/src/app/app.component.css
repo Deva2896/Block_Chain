@@ -1,0 +1,73 @@
+.mat-tab-group
+{
+  margin-bottom: 50px;
+  /*width: 800px;*/
+  background-color: rgb(250, 212, 223);
+  color: white;
+}
+
+.matcard
+{
+	background-color: rgb(242, 58, 108);
+	font-size: 40px;
+	color: white;
+	height: 70px;
+}
+
+.bodyclass
+{
+	background-color: rgb(237, 211, 218);
+}
+.s{
+		content: "";
+		display: table;
+		clear: both;
+}
+
+.h{
+	background-color: rgb(15, 18, 221);
+	padding: 15px;
+	text-align: center;
+	font-size: 15px;
+	color: rgb(185, 33, 33);
+  }
+
+.n{
+	
+		float: left;
+		width: 30%;
+		height: 300px; /* only for demonstration, should be removed */
+		background: #ccc;
+		padding: 20px;
+	
+}
+.f{
+
+
+	background-color: rgb(102, 102, 102);
+	padding: 15px;
+	text-align: center;
+	font-size: 15px;
+	color: rgb(202, 73, 73);
+  
+
+}
+.p1
+{
+background-color: darkgray;
+}
+.head
+{
+	background-color: rgb(227, 34, 9);
+	height:50px;
+	color:rgb(128, 0, 122);
+	font-size: 25px;
+}
+.mat
+{
+	background-color: rgba(227, 9, 216, 0.349);
+	height:580px;
+	color:rgb(34, 33, 34);
+	font-size: 25px;
+	background-image:url('../assets/back.jpeg');
+}

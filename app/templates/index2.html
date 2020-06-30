@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<div class="col">
+	<center>
+		<div class="row-6" style="height: 150px;width: 400px;background-color:blue">
+			<div class="card">
+				  <div class="card-body">
+				    	<center>
+				    		<form action="/submit" id="textform" method="post">
+				    			<div class="col">
+										<div class="input-group mb-3">
+										<div class="input-group-prepend">
+										<span class="input-group-text" id="basic-addon1">Name</span>
+										</div>
+										<input type="text" class="form-control" placeholder="Username" aria-label="Company Name" name = 'author' aria-describedby="basic-addon1">
+									</div>
+
+				    				<div class="row-3">
+										<div class="input-group mb-3">
+										<div class="input-group-prepend">
+										<span class="input-group-text" id="basic-addon1">Raw Material</span>
+										</div>
+										<input type="text" class="form-control" placeholder="Raw Material" aria-label="Username" name = 'content' aria-describedby="basic-addon1">
+										</div>				    				
+									</div>
+				    				
+				    				<div class="row-3">
+										<div class="input-group mb-3">
+										<div class="input-group-prepend">
+										<span class="input-group-text" id="basic-addon1">Status</span>
+										</div>
+										<input type="text" class="form-control" placeholder="status" aria-label="Username" name = 'number' aria-describedby="basic-addon1">
+										</div>					    				
+									</div>
+				    			
+				    				<div class="row-3">
+				    					<div class="row">
+				    						<div class="col-6">
+				    							<button type="reset">RESET</button>
+				    						</div>
+				    						<br>
+				    						<div class="col-6">
+				    							<button type="submit" >SUBMIT</button>
+				    						</div>
+				    					</div>
+				    				</div>
+
+
+				    			</div>
+								
+							</form>
+				    	</center>
+				  </div>
+			</div>
+		</div>
+	</center>
+	<div class="row-6" style="padding-top: 100px">
+		<a href="{{node_address}}/mine" target="_blank"><button>Mine</button></a>
+		<a href="/"><button>Replace</button></a>
+	</div>
+</div>
+<br>
+
+
+
+	<div>
+		<table class="table table-bordered table-dark">
+		  <thead>
+		    <tr>
+		      <th scope="col">No.</th>
+		      <th scope="col">Company Name</th>
+		      <th scope="col">Raw Name</th>
+		      <th scope="col">status</th>
+		      <th scope="col">hash</th>
+		      <th scope="col">prev hash</th>
+		      <th scope="col">timestamp</th>
+		    </tr>
+		  </thead>
+		{% for post in posts %}
+			<tbody>
+				    <tr>
+				      <th scope="row">{{ loop.index }}</th>
+				      <td>{{post.author}}</td>
+				      <td>{{post.content}}</td>
+				      <td>{{post.number}}</td>
+				      <td>{{post.hash}}</td>
+				      <td>{{post.previous_hash}}</td>
+				      <td>{{post.timestamp}}</td>
+				    </tr>  	
+			</tbody>
+		{% endfor %}
+		 </table>
+	</div>
+
+
+{% endblock %}
+
+

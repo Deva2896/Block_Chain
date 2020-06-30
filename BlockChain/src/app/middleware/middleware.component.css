@@ -1,0 +1,51 @@
+.matcard
+{
+	width: 350px;
+	/*padding-top: 100px;*/
+	background-color: rgba(242, 58, 107, 0.658);
+}
+
+.post-card
+{
+	/*padding: 20px;*/
+	height: 450px;
+	width: 350px;
+	/*background-color: rgb(237, 240, 245);*/
+	background-color: rgb(242, 58, 108);
+}
+
+.input
+{
+	width: 100px;
+}
+
+.get
+{
+	background-color:rgb(237, 211, 218);
+	height: 30px;
+	width: 50px;	
+	color: black;
+	font-size: 10px;																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																											
+}
+
+.gets
+{
+	background-color:rgba(43, 46, 43, 0.781);
+	height: 40px;
+	width: 100px;	
+	color: white;
+	font-size: 20px;	
+}
+
+
+.chk
+{
+	/*padding: 100px;*/
+	height: 270px;
+	width: 800px;
+	border: solid;
+}
+
+.p{
+	background-color: #0deeee;
+}
